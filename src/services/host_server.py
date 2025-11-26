@@ -13,6 +13,6 @@ def search_host_server(ip):
             return f"Erro: {data_response['message']}"
             
         return data_response .get('org') or data_response .get('isp')
-        
+        ''
     except Exception as e:
         return f"Erro de conexão: {e}"

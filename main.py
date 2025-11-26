@@ -1,8 +1,10 @@
 # main.py
 import sys
 from src.args import setup_parser
+
 from src.services.host_server import search_host_server
 from src.services.search_ip import get_ip_from_url
+from src.services.http_service import get_json_response
 
 def main():
     
@@ -20,6 +22,11 @@ def main():
     if args.searchipbyurl:
         resultado = get_ip_from_url(args.searchipbyurl)
         print(f"\nResultado:\nIP: {resultado}")
+
+    if args.json_url:
+        resultado = get_json_response(args.json_url)
+        print("\n--- Resposta JSON ---")
+        print(resultado)
 
 
 

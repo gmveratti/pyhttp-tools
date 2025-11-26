@@ -23,4 +23,11 @@ def setup_parser():
         help='Search IP by url (google.com)'
     )
 
+    group_network.add_argument(
+        '-g', '--get', 
+        dest='json_url', 
+        type=str,
+        help='Get JSON response from URL (Ex: api.github.com/users/defunkt)'
+    )
+
     return parser
